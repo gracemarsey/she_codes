@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+
+    <style>
+      body {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #1865d6;
+        font-size: 34px;
+        margin: 0px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: lighter;
+        font-size: 34px;
+        margin-top: 10px;
+      }
+
+      .saturday {
+        max-width: 400px;
+        padding: 5px 140px 5px 140px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .sunday {
+        max-width: 400px;
+        padding: 5px 140px 5px 140px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .tomorrow {
+        max-width: 400px;
+        padding: 5px 140px 5px 140px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .saturday:hover {
+        background-color: #fffbef;
+        cursor: pointer;
+      }
+
+      .sunday:hover {
+        background-color: #fffbef;
+        cursor: pointer;
+      }
+
+      .tomorrow:hover {
+        background-color: #fffbef;
+        cursor: pointer;
+      }
+
+      p {
+        word-spacing: 10px;
+      }
+
+      .button {
+        padding: 18px 23px;
+        align-self: center;
+        background-color: #1865d6;
+        color: #ffffff;
+        border: 0.5px solid #1865d6;
+        border-radius: 40px;
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      .button:hover {
+        background-color: #ffffff;
+        color: #1865d6;
+        cursor: pointer;
+      }
+
+      .name {
+        word-spacing: 3px;
+        color: #4d4d4d;
+      }
+
+      strong {
+        color: #4d4c47;
+      }
+
+      h3 {
+        word-spacing: 5px;
+      }
+
+      .topblack {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      🌤
+      <br />
+      Currently 21° in Tokyo
+    </h1>
+    <h2>13° /<strong class="topblack"> 23°</strong></h2>
+    <ul>
+      <li class="tomorrow">
+        <h3>🌧 Tomorrow</h3>
+        <p>10° /<strong> 22°</strong></p>
+      </li>
+      <li class="saturday">
+        <h3>🌥 Saturday</h3>
+        <p>15° /<strong> 17°</strong></p>
+      </li>
+      <li class="sunday">
+        <h3>🔅 Sunday</h3>
+        <p>25° /<strong> 28°</strong></p>
+      </li>
+    </ul>
+
+    <button class="button">Change city</button>
+
+    <p class="name">Coded by Grace Marsey</p>
+
+    <script>
+      function info_gather() {
+        let city = prompt("What city do you live in?");
+        let temperature = prompt("what temperature is it?");
+        let heading = document.querySelector("h1");
+        if (temperature < 0) {
+          heading.innerHTML =
+            "☹️<br />Currently " + temperature + "°C in " + city;
+        } else {
+          heading.innerHTML =
+            "😄<br />Currently " + temperature + "°C in " + city;
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", info_gather);
+    </script>
+  </body>
+</html>
