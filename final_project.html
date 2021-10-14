@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      .main {
+        background: linear-gradient(#ffe8c2, #ffd29d);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 30px 328px 30px 328px;
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: #dda3b2;
+        font-size: 35px;
+        margin: 25px;
+        padding: 20px;
+        font-weight: bold;
+        display: inline;
+        text-align: center;
+        border: 1px groove #423e28;
+        border-radius: 15px;
+        width: 68%;
+      }
+
+      h2 {
+        font-weight: lighter;
+        font-size: 30px;
+        border: 0px;
+        padding: 0px;
+        margin: 15px;
+        display: inline;
+        text-align: center;
+        color: #764248;
+        width: 100%;
+      }
+
+      .button {
+        padding: 18px 23px;
+        align-self: center;
+        background-color: #dda3b2;
+        color: #ffffff;
+        border: 0.5px solid #423e28;
+        border-radius: 40px;
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease-in-out;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .button:hover {
+        background-color: #ffffff;
+        color: #dda3b2;
+        cursor: pointer;
+      }
+
+      img {
+        width: 50%;
+        border-radius: 15px;
+      }
+      p {
+        width: 68%;
+        color: #764248;
+        font-size: 25px;
+        text-align: start;
+      }
+
+      a {
+        color: #764248;
+        font-size: 15px;
+        display: flex;
+        text-align: center;
+      }
+      hr {
+        line-height: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>I love Pancakes!</h1>
+      <h2>
+        <em><span style="color: #dda3b2">Especially</span> buttermilk ones</em>
+      </h2>
+      <hr />
+      <img
+        src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/51a9c5b156c84977ae50004b5ef622b2/finalFB.jpg"
+        alt="stack of pancakes"
+      />
+      <hr />
+      <p>
+        <em>Pancakes</em> are flat cakes that are made from a starch-based
+        batter made up of eggs, milk and butter. They are often cooked on a flat
+        surface, such as a grill or a frying pan. You can then top with
+        <strong>anything you like!</strong>
+      </p>
+      <small
+        ><a href="https://en.wikipedia.org/wiki/Pancake" target="_blank"
+          >Find out more on <br />
+          Wikipedia</a
+        ></small
+      >
+
+      <button class="button">Try pancakes here</button>
+
+      <script>
+        function info_gather() {
+          let name = prompt("What is your name?");
+          if (name.length) {
+            alert(
+              "Thanks, " +
+                name +
+                " we will be in touch. In the meantime, try some pancakes!"
+            );
+          } else {
+            alert("No name means no pancakes for you!");
+          }
+        }
+        let button = document.querySelector("button");
+        button.addEventListener("click", info_gather);
+      </script>
+    </div>
+  </body>
+</html>
